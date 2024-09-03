@@ -5,7 +5,6 @@ import image2 from '../assets/image1.jpeg';
 import image3 from '../assets/image1.jpeg'; 
 
 function Gallery() {
-  // Initialize with 3 images
   const [images, setImages] = useState([
     image1,
     image2,
