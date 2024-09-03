@@ -1,0 +1,38 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #2a2a2a; /* Assuming a dark theme background */
+}
+
+.empty-space {
+  flex: 1; /* Takes the left half of the screen */
+}
+
+.widgets-container {
+  flex: 1; /* Takes the right half of the screen */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tabs-container,
+.gallery-container {
+  width: 100%; /* Ensures both components take the full width of the container */
+  max-width: 600px; /* Set a maximum width to control the size */
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .empty-space {
+    display: none; /* Hides the empty space on mobile */
+  }
+  .widgets-container {
+    width: 100%;
+    align-items: center;
+  }
+}

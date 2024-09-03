@@ -1,0 +1,52 @@
+.tabs-container {
+    background: linear-gradient(135deg, #2a2a2a, #4a4a4a); /* Dark grey gradient background */
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .tabs button {
+    flex: 1;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .tabs button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #6a6a6a; /* Grey underline */
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .tabs button:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .tabs button.active::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .tab-content {
+    background-color: #3a3a3a; /* Dark grey background for tab content */
+    padding: 20px;
+    border-radius: 16px;
+    color: white;
+    font-size: 16px;
+  }

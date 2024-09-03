@@ -1,0 +1,107 @@
+.gallery-container {
+    background: linear-gradient(135deg, #2a2a2a, #4a4a4a); /* Dark grey gradient background */
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    position: relative; /* Make the container position relative */
+  }
+  
+  .gallery-header {
+    display: flex;
+    justify-content: space-between; /* Space between title and controls */
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .gallery-header h2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 16px;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .scroll-btn {
+    background-color: #3a3a3a; /* Dark grey for buttons */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow for buttons */
+  }
+  
+  .scroll-btn:hover {
+    background-color: #5a5a5a; /* Slightly lighter grey on hover */
+  }
+  
+  .add-image-btn {
+    padding: 10px 20px;
+    background-color: #3a3a3a; /* Dark grey for button */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 3D box shadow for button */
+  }
+  
+  .add-image-btn:hover {
+    background-color: #5a5a5a; /* Slightly lighter grey on hover */
+  }
+  
+  .gallery-content {
+    display: flex;
+    align-items: center;
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  .image-slider {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s ease; /* Smooth transition for sliding */
+  }
+  
+  .image-wrapper {
+    flex: 0 0 auto;
+    background-color: #3a3a3a; /* Dark grey for image wrapper */
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Enhanced transition */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
+    perspective: 1000px;
+  }
+  
+  .image-wrapper:hover {
+    transform: rotateY(10deg) rotateX(-10deg) scale(1.05); /* Increased rotation and scaling */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.7); /* More pronounced shadow */
+  }
+  
+  .gallery-image {
+    width: 100px; /* Adjust width as needed */
+    height: 50px;
+    border-radius: 8px;
+  }
+  
+  .image-wrapper img {
+    width: 200px; /* Adjust width as needed */
+    height: auto;
+    border-radius: 8px;
+    filter: grayscale(100%); /* Start with grayscale */
+    transition: filter 0.3s ease; /* Smooth transition for filter */
+  }
+  
+  .image-wrapper:hover img,
+  .image-wrapper:focus img {
+    filter: grayscale(0%); /* Show color on hover */
+  }
